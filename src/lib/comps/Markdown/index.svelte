@@ -2,12 +2,30 @@
 	import { Marked } from 'marked';
 	import { markedHighlight } from 'marked-highlight';
 	import hljs from 'highlight.js';
-	import 'highlight.js/styles/atom-one-dark-reasonable.css';
-	import './index.css';
 	import { nanoid } from 'nanoid';
+	import { initTheme } from '$lib/utils/theme.svelte';
+	import lightTheme from 'highlight.js/styles/atom-one-light.css?raw';
+	import darkTheme from 'highlight.js/styles/atom-one-dark-reasonable.css?raw';
+
+	let isDark = $state(false);
+	initTheme((v) => {
+		isDark = v;
+	});
+
+	let style: HTMLStyleElement | null = null;
+
+	let themeStyle = $derived(isDark ? darkTheme : lightTheme);
+	$effect(() => {
+		if (!style) {
+			style = document.createElement('style');
+			style.textContent = themeStyle;
+			document.head.appendChild(style);
+		} else {
+			style.textContent = themeStyle;
+		}
+	});
 
 	let { raw } = $props();
-
 	const copySvg = `
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +80,7 @@
 	function copyPlugin(code: string, lang: string) {
 		const codeId = nanoid();
 		codeMap.codeId = code;
-		return `<div class="absolute left-0 top-0 flex justify-between h-8 bg-gray-700 w-full pl-5 pr-2 items-center text-gray-200">
+		return `<div class="absolute left-0 top-0 flex justify-between h-8 w-full pl-5 pr-2 items-center bg-zinc-200 dark:text-gray-100 dark:bg-gray-700 ">
 		<span class="flex-1 font-semibold">${lang}</span><button class="flex items-center gap-1 cursor-pointer" data-id=${codeId}>${copySvg}</button></div>`;
 	}
 
@@ -103,3 +121,9 @@
 >
 	{@html html}
 </section>
+
+<style>
+	:global pre code.hljs {
+		padding: 1em 1px 0 1em !important;
+	}
+</style>
