@@ -116,7 +116,7 @@
 </script>
 
 <section
-	class="prose prose-pre:m-0 prose-h1:mt-4 prose-h2:my-4 prose-pre:p-0 prose-pre:relative prose-code:p-0 dark:prose-invert mx-auto"
+	class="prose prose-pre:m-0 prose-h1:mt-4 prose-h2:my-4 prose-pre:p-0 prose-pre:relative prose-code:p-0 dark:prose-invert mx-auto max-w-[90vw]"
 	onclick={handleCopy}
 >
 	{@html html}
