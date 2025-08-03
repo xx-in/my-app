@@ -4,6 +4,9 @@
 	import raw from './raw.md?raw';
 </script>
 
+<svelte:head>
+	<title>个人网站-测试页</title>
+</svelte:head>
 <div>
 	<Markdown {raw}></Markdown>
 </div>
