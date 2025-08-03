@@ -13,15 +13,16 @@
 
 {#if visible}
 	<!-- 遮罩层 -->
-	<div class="fixed inset-0 z-40 bg-black/90 bg-opacity-40" onclick={hide}></div>
+	<div class="fixed inset-0 z-40 bg-black/50 bg-opacity-40 dark:bg-black/90" onclick={hide}></div>
 
 	<!-- 抽屉主体 -->
 	<div
-		class={`w-8/9 fixed right-0 top-0 z-50 flex h-screen flex-col bg-zinc-900 p-6 shadow-lg`}
+		class={`w-8/9 fixed right-0 top-0 z-50 flex h-screen flex-col 
+		bg-zinc-100 p-6 shadow-lg dark:bg-zinc-900`}
 		transition:fly={{ x: 320, duration: 300 }}
 	>
 		<div class="flex justify-between pb-3">
-      <div>常用功能</div>
+			<div>常用功能</div>
 			<button class="cursor-pointer" onclick={hide}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

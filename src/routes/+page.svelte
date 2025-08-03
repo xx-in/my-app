@@ -13,7 +13,7 @@
 		{
 			href: '/blogs',
 			text: '博客列表'
-		},
+		}
 	];
 
 	let menuVisible = $state(false);
@@ -25,7 +25,7 @@
 
 <section class="px-3">
 	<div
-		class="flex items-center justify-between gap-2 border-b pb-2 pt-3 shadow dark:border-b-zinc-700"
+		class="flex items-center justify-between gap-2 border-b border-b-zinc-200 pb-2 pt-3 dark:border-b-zinc-700"
 	>
 		<a class="flex flex-1 items-center gap-2" href="/">
 			<svg viewBox="0 0 36 21" fill="none" class="h-4 text-black dark:text-white"
@@ -61,11 +61,11 @@
 		<RightDrawer bind:visible={menuVisible}>
 			<div class="flex flex-col gap-2">
 				{#each routes as { text, href }}
-					<a {href} class="p-2 text-sm shadow text-left hover:text-sky-500">{text}</a>
+					<a {href} class="p-2 text-left text-sm shadow hover:text-sky-500">{text}</a>
 				{/each}
 			</div>
 		</RightDrawer>
-		<div class="hidden flex-1 gap-6 sm:flex justify-end pr-24">
+		<div class="hidden flex-1 justify-end gap-6 pr-24 sm:flex">
 			{#each routes as { text, href }}
 				<a {href} class="hover:text-sky-500">{text}</a>
 			{/each}
