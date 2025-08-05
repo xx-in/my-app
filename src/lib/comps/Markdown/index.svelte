@@ -22,7 +22,7 @@
 			langPrefix: 'hljs language-',
 			highlight(code, lang, info) {
 				const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-				let wrapper = `<div class="h-[50vh] overflow-auto pt-6">`;
+				let wrapper = `<div class="max-h-[50vh] overflow-auto pt-6">`;
 				wrapper += `<copy-plugin lang="${lang}" code="${encodeURIComponent(code)}"></copy-plugin>`;
 				wrapper += hljs.highlight(code, { language }).value;
 				wrapper += `</div>`;
@@ -35,7 +35,7 @@
 </script>
 
 <section
-	class="prose prose-pre:m-0 prose-h1:mt-4 prose-h2:my-4 prose-pre:p-0 prose-pre:relative prose-code:p-0 dark:prose-invert mx-auto max-w-[90vw] md:max-w-[70vw]"
+	class="prose prose-pre:m-0 prose-h1:mt-4 prose-h2:my-4 prose-pre:p-0 prose-pre:relative prose-code:p-0 dark:prose-invert mx-auto max-w-[90vw] pb-[50vh] md:max-w-[60vw]"
 >
 	{@html html}
 </section>
