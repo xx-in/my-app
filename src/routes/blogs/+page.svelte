@@ -20,6 +20,11 @@
 			name: '发布订阅',
 			desc: '关于发布订阅的简单实现。',
 			time: '2025-08-02'
+		},
+		{
+			name: 'sveltekit',
+			desc: '关于svelte和sveltekit常见问题的总结。',
+			time: '2025-08-05'
 		}
 	];
 </script>
