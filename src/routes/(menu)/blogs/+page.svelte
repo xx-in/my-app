@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Prose from '$lib/comps/Prose.svelte';
+
 	const blogList = [
 		{
 			name: '开发经验',
@@ -30,15 +32,15 @@
 </script>
 
 <svelte:head>
-	<title>个人网站-博客</title>
+	<title>个人网站-博客列表</title>
 </svelte:head>
-<section class="prose m-auto max-w-[70vw]">
-	<h1 class="m-auto p-2 text-center text-2xl">博客列表</h1>
-	{#each blogList as blog}
+<Prose>
+	<h1>博客列表</h1>
+	{#each blogList as blog, index}
 		<div class="my-2 flex w-full flex-col justify-between gap-2 p-2">
 			<a href={`/blogs/${blog.name}`} class=" ">
 				<span class="">
-					{blog.name}
+					{index + 1}.{blog.name}
 				</span>
 			</a>
 
@@ -50,4 +52,4 @@
 			</span>
 		</div>
 	{/each}
-</section>
+</Prose>

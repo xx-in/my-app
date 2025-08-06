@@ -7,7 +7,9 @@
 	<title>{page.status} - 页面未找到</title>
 </svelte:head>
 
-<div class="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-800">
+<div
+	class="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-800 dark:invert"
+>
 	<div class="px-6 text-center">
 		<h1 class="animate-bounce text-8xl font-bold text-red-500">{page.status}</h1>
 		<h2 class="mt-4 text-2xl font-semibold">哎呀！页面走丢了</h2>

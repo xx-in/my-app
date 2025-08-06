@@ -21,11 +21,12 @@
 	function handleShowMenu() {
 		menuVisible = true;
 	}
+
+	function handleHideMenu() {
+		menuVisible = false;
+	}
 </script>
 
-<svelte:head>
-	<title>个人网站</title>
-</svelte:head>
 <section class="px-3">
 	<div
 		class="flex items-center justify-between gap-2 border-b border-b-zinc-200 pb-2 pt-3 dark:border-b-zinc-700"
@@ -62,7 +63,7 @@
 		</button>
 
 		<RightDrawer bind:visible={menuVisible}>
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-2" onclick={handleHideMenu}>
 				{#each routes as { text, href }}
 					<a {href} class="p-2 text-left text-sm shadow hover:text-sky-500">{text}</a>
 				{/each}
@@ -72,12 +73,6 @@
 			{#each routes as { text, href }}
 				<a {href} class="hover:text-sky-500">{text}</a>
 			{/each}
-		</div>
-	</div>
-
-	<div class="p-2">
-		<div class="py-3">
-			本网站仅用于记录个人的日常生活，以及提供一些个人要使用的服务，同时构建网站也能磨练自己掌握的技能。
 		</div>
 	</div>
 </section>

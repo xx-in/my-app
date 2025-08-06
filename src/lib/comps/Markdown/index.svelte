@@ -8,6 +8,7 @@
 	import { nanoid } from 'nanoid';
 	import { isDark } from '$lib/utils/theme';
 	import { setStyle } from '$lib/utils/style';
+	import Prose from '../Prose.svelte';
 
 	const styleId = nanoid();
 	isDark.subscribe((isDark) => {
@@ -34,14 +35,6 @@
 	const html = marked.parse(raw);
 </script>
 
-<section
-	class="prose prose-pre:m-0 prose-h1:mt-4 prose-h2:my-4 prose-pre:p-0 prose-pre:relative prose-code:p-0 dark:prose-invert mx-auto max-w-[90vw] pb-[50vh] md:max-w-[60vw]"
->
+<Prose>
 	{@html html}
-</section>
-
-<style>
-	:global pre code.hljs {
-		padding: 1em 1px 0 1em !important;
-	}
-</style>
+</Prose>
