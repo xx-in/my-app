@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section>
-	<div class="m-auto flex w-2/3 flex-wrap gap-8 p-4">
+	<div class="m-auto flex flex-wrap gap-8 p-4">
 		{#each Object.entries(linkList) as [key, value]}
 			<a href={value.link} class="flex items-center justify-center gap-4" target="_blank">
 				<img src={value.icon} class="size-6" />

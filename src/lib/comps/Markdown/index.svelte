@@ -38,3 +38,11 @@
 <Prose>
 	{@html html}
 </Prose>
+
+<style>
+	:global code.hljs {
+		font-style: normal !important;
+		margin: 0;
+		padding: 0;
+	}
+</style>

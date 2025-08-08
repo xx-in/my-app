@@ -1,4 +1,6 @@
 <script lang="ts">
+	import HeaderMenu from '$lib/comps/HeaderMenu.svelte';
+	import Main from '$lib/comps/Main.svelte';
 	import Prose from '$lib/comps/Prose.svelte';
 
 	const blogList = [
@@ -27,6 +29,11 @@
 			name: 'sveltekit',
 			desc: '关于svelte和sveltekit常见问题的总结。',
 			time: '2025-08-05'
+		},
+		{
+			name: '框架对比',
+			desc: '框架对比',
+			time: '2025-08-08'
 		}
 	];
 </script>
@@ -34,22 +41,28 @@
 <svelte:head>
 	<title>个人网站-博客列表</title>
 </svelte:head>
-<Prose>
-	<h1>博客列表</h1>
-	{#each blogList as blog, index}
-		<div class="my-2 flex w-full flex-col justify-between gap-2 p-2">
-			<a href={`/blogs/${blog.name}`} class=" ">
-				<span class="">
-					{index + 1}.{blog.name}
-				</span>
-			</a>
 
-			<span>
-				{blog.desc}
-			</span>
-			<span>
-				{blog.time}
-			</span>
-		</div>
-	{/each}
-</Prose>
+<Main>
+	<HeaderMenu />
+	<div class="flex-1 overflow-auto">
+		<Prose>
+			<h1>博客列表</h1>
+			{#each blogList as blog, index}
+				<div class="my-2 flex w-full flex-col justify-between gap-2 p-2">
+					<a href={`/blogs/${blog.name}`} class=" ">
+						<span class="">
+							{index + 1}. {blog.name}
+						</span>
+					</a>
+
+					<span>
+						{blog.desc}
+					</span>
+					<span>
+						{blog.time}
+					</span>
+				</div>
+			{/each}
+		</Prose>
+	</div>
+</Main>

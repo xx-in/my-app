@@ -1,4 +1,4 @@
-# sveltekit 
+# SvelteKit 
 
 以下是一些常见问题及问题解析
 
