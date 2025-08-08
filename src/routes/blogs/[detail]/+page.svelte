@@ -9,4 +9,6 @@
 	});
 </script>
 
-<Markdown raw={data.detailContent}></Markdown>
+<div class="mx-auto w-2/3">
+	<Markdown raw={data.detailContent}></Markdown>
+</div>
