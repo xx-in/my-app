@@ -45,7 +45,7 @@
 <Main>
 	<HeaderMenu />
 	<div class="flex-1 overflow-auto">
-		<Prose>
+		<div>
 			<h1>博客列表</h1>
 			{#each blogList as blog, index}
 				<div class="my-2 flex w-full flex-col justify-between gap-2 p-2">
@@ -63,6 +63,6 @@
 					</span>
 				</div>
 			{/each}
-		</Prose>
+		</div>
 	</div>
 </Main>
