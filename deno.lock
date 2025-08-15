@@ -7,7 +7,6 @@
     "npm:@sveltejs/adapter-static@^3.0.8": "3.0.8_@sveltejs+kit@2.27.0__@sveltejs+vite-plugin-svelte@6.1.0___svelte@5.37.3____acorn@8.15.0___vite@7.0.6____picomatch@4.0.3__svelte@5.37.3___acorn@8.15.0__vite@7.0.6___picomatch@4.0.3__acorn@8.15.0_@sveltejs+vite-plugin-svelte@6.1.0__svelte@5.37.3___acorn@8.15.0__vite@7.0.6___picomatch@4.0.3_svelte@5.37.3__acorn@8.15.0_vite@7.0.6__picomatch@4.0.3",
     "npm:@sveltejs/kit@^2.27.0": "2.27.0_@sveltejs+vite-plugin-svelte@6.1.0__svelte@5.37.3___acorn@8.15.0__vite@7.0.6___picomatch@4.0.3_svelte@5.37.3__acorn@8.15.0_vite@7.0.6__picomatch@4.0.3_acorn@8.15.0",
     "npm:@sveltejs/vite-plugin-svelte@^6.1.0": "6.1.0_svelte@5.37.3__acorn@8.15.0_vite@7.0.6__picomatch@4.0.3",
-    "npm:@tailwindcss/forms@~0.5.10": "0.5.10_tailwindcss@4.1.11",
     "npm:@tailwindcss/typography@~0.5.16": "0.5.16_tailwindcss@4.1.11",
     "npm:@tailwindcss/vite@^4.1.11": "4.1.11_vite@7.0.6__picomatch@4.0.3",
     "npm:highlight.js@^11.11.1": "11.11.1",
@@ -395,13 +394,6 @@
         "vitefu"
       ]
     },
-    "@tailwindcss/forms@0.5.10_tailwindcss@4.1.11": {
-      "integrity": "sha512-utI1ONF6uf/pPNO68kmN1b8rEwNXv3czukalo8VtJH8ksIkZXr3Q3VYudZLkCsDd4Wku120uF02hYK25XGPorw==",
-      "dependencies": [
-        "mini-svg-data-uri",
-        "tailwindcss"
-      ]
-    },
     "@tailwindcss/node@4.1.11": {
       "integrity": "sha512-yzhzuGRmv5QyU9qLNg4GTlYI6STedBWRE7NjxP45CsFYYq9taI0zJXZBMqIC/c8fViNLhmrbpSFS57EoxUmD6Q==",
       "dependencies": [
@@ -765,10 +757,6 @@
       "integrity": "sha512-ij/2lXfCRT71L6u0M29tJPhP0bM5shLL3u5BePhFwPELj2blMJ6GDtD7PfJhRLhJ/c2UwrK17ySVcDzy2YHjHQ==",
       "bin": true
     },
-    "mini-svg-data-uri@1.4.4": {
-      "integrity": "sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==",
-      "bin": true
-    },
     "minipass@7.1.2": {
       "integrity": "sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw=="
     },
@@ -1068,7 +1056,6 @@
         "npm:@sveltejs/adapter-static@^3.0.8",
         "npm:@sveltejs/kit@^2.27.0",
         "npm:@sveltejs/vite-plugin-svelte@^6.1.0",
-        "npm:@tailwindcss/forms@~0.5.10",
         "npm:@tailwindcss/typography@~0.5.16",
         "npm:@tailwindcss/vite@^4.1.11",
         "npm:highlight.js@^11.11.1",
