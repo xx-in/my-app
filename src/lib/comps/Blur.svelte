@@ -16,7 +16,7 @@
 	<!-- 背景图片层 -->
 	<img {src} class={twMerge('absolute left-0 top-0 size-full ', className)} />
 	<!-- 高斯模糊层 -->
-	<div class="bg-gray/30 absolute left-0 top-0 size-full backdrop-blur-sm"></div>
+	<div class="bg-black/10 absolute left-0 top-0 size-full backdrop-blur-sm"></div>
 	<!-- 上层内容 -->
 	<div class="absolute left-0 top-0 size-full bg-transparent">
 		{@render children?.()}

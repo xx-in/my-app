@@ -27,15 +27,19 @@
 
 <Main>
 	<Blur ondblclick={enterFullscreen} src={bgSrc}>
-		<section class="h-full snap-y overflow-y-auto">
-			<div class="grid grid-cols-4 gap-10 p-4 md:grid-cols-8">
+		<section class="flex flex-col h-full">
+		<!-- <div class="flex-0 p-2 border">
+			<input type="text" placeholder="搜索栏">
+		</div> -->
+		<div class="flex-1 snap-y overflow-y-auto">
+			<div class="grid grid-cols-4 gap-10 px-4 py-8 md:grid-cols-8 md:p-8">
 				{#each Object.entries(linkList) as [key, value]}
 					<a
 						href={value.link}
 						class="flex snap-start scroll-mt-6 flex-col items-center justify-center gap-4"
 						target="_blank"
 					>
-						<Img src={value.icon} class="size-16 select-none rounded-xl md:size-20" />
+						<Img src={value.icon} class="size-16 select-none rounded-lg bg-amber-50 md:size-20" />
 						<div
 							class="w-16 select-none overflow-hidden truncate text-center text-xs text-gray-200 md:w-full md:text-base"
 							title={value.title}
@@ -45,6 +49,7 @@
 					</a>
 				{/each}
 			</div>
+		</div>
 		</section>
 	</Blur>
 </Main>
