@@ -101,7 +101,7 @@
             type="text"
             placeholder="输入要搜索的内容"
             autofocus
-            class="w-full select-none border-none bg-transparent pl-6 text-white placeholder-stone-400 focus:ring-transparent"
+            class="w-full select-none border-none bg-transparent pl-6 text-white placeholder-stone-400 outline-none"
             bind:value={searchContent}
             onkeydown={searchOnEnter}
           />
