@@ -39,7 +39,7 @@
 						class="flex snap-start scroll-mt-6 flex-col items-center justify-center gap-4"
 						target="_blank"
 					>
-						<Img src={value.icon} class="size-16 select-none rounded-lg bg-amber-50 md:size-20" />
+						<Img src={value.icon} class="size-14 select-none rounded-2xl bg-amber-50 md:size-16" />
 						<div
 							class="w-16 select-none overflow-hidden truncate text-center text-xs text-gray-200 md:w-full md:text-base"
 							title={value.title}
